@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,11 +12,9 @@
 
 :root{
     --cream:#F7EFE6;
-    --sand:#ECDCC8;
     --orange:#D97732;
-    --apricot:#E6A15A;
-    --sage:#8FA97D;
-    --olive:#6F8A5B;
+    --yellow:#E6A15A;
+    --green:#8FA97D;
     --dark:#3A2F28;
 }
 
@@ -25,8 +24,9 @@ html{
 
 body{
     margin:0;
-    font-family:"Helvetica Neue",Arial,sans-serif;
     overflow-x:hidden;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    background:var(--cream);
     color:var(--dark);
 }
 
@@ -38,72 +38,84 @@ section{
     justify-content:center;
     align-items:center;
     padding:80px 20px;
+    position:relative;
+    overflow:hidden;
 }
 
-/* HERO */
+/* BLOBS */
 
-.hero{
-    background:linear-gradient(
-        180deg,
-        var(--cream),
-        #fffaf5
-    );
+.blob{
+    position:absolute;
+    border-radius:50%;
+    opacity:.18;
+    z-index:0;
 }
 
-/* STORY */
+.blob-orange{
+    width:650px;
+    height:650px;
 
-.story{
-    background:linear-gradient(
-        180deg,
-        #fffaf5,
-        var(--sand)
-    );
+    background:var(--orange);
+
+    top:-300px;
+    right:-250px;
+
+    border-radius:
+        60% 40% 45% 55% /
+        45% 55% 45% 55%;
 }
 
-/* WEDDING */
+.blob-yellow{
+    width:450px;
+    height:450px;
 
-.wedding{
-    background:linear-gradient(
-        180deg,
-        var(--apricot),
-        var(--orange)
-    );
-    color:white;
+    background:var(--yellow);
+
+    bottom:-180px;
+    left:-180px;
+
+    border-radius:
+        50% 50% 40% 60% /
+        60% 40% 60% 40%;
 }
 
-/* RSVP */
+.blob-green{
+    width:280px;
+    height:280px;
 
-.rsvp{
-    background:linear-gradient(
-        180deg,
-        var(--sage),
-        var(--olive)
-    );
-    color:white;
+    background:var(--green);
+
+    bottom:80px;
+    right:-100px;
+
+    border-radius:
+        50% 50% 60% 40% /
+        40% 60% 40% 60%;
 }
-
-/* CONTENT */
 
 .content{
-    max-width:1200px;
+    position:relative;
+    z-index:2;
+
     width:100%;
+    max-width:1200px;
+
     text-align:center;
 }
+
+/* TITLE */
 
 h1{
     font-size:clamp(3rem,8vw,6rem);
     margin-bottom:20px;
-    color:var(--orange);
-}
-
-.wedding h1,
-.rsvp h1{
-    color:white;
+    color:var(--dark);
 }
 
 p{
-    max-width:850px;
+    max-width:800px;
+
     margin:auto;
+
     line-height:1.8;
     font-size:1.2rem;
 }
@@ -111,264 +123,15 @@ p{
 /* PHOTOS */
 
 .story-photo{
+
     width:min(90vw,1000px);
+
     border-radius:30px;
+
     margin-bottom:40px;
-    box-shadow:0 20px 60px rgba(0,0,0,.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.15);
 }
 
-/* LANGUAGE SELECTOR */
-
-.corner-language-selector{
-    position:fixed;
-    top:20px;
-    right:20px;
-    z-index:1000;
-}
-
-.corner-language-selector button{
-    border:none;
-    background:white;
-    padding:10px;
-    border-radius:10px;
-    margin-left:5px;
-    cursor:pointer;
-}
-
-.hero-language-selector{
-    margin-top:40px;
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.hero-language-selector button{
-    border:none;
-    background:var(--orange);
-    color:white;
-    padding:18px 35px;
-    border-radius:16px;
-    cursor:pointer;
-    font-size:1.1rem;
-}
-
-.hero-language-selector button:hover{
-    transform:translateY(-3px);
-}
-
-/* ANIMATION */
-
-.fade-in{
-    opacity:0;
-    transform:translateY(80px);
-    transition:all 1.2s ease;
-}
-
-.fade-in.visible{
-    opacity:1;
-    transform:translateY(0);
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="corner-language-selector">
-<button onclick="showLang('en')">🇬🇧</button>
-<button onclick="showLang('fr')">🇫🇷</button>
-<button onclick="showLang('it')">🇮🇹</button>
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="content">
-
-<h1>Lou‑Ann & Giulia</h1>
-
-<div class="lang en">
-<p>Welcome to our wedding website</p>
-</div>
-
-<div class="lang fr" style="display:none">
-<p>Bienvenue sur notre site de mariage</p>
-</div>
-
-<div class="lang it" style="display:none">
-<p>Benvenuti sul nostro sito di matrimonio</p>
-</div>
-
-<div class="hero-language-selector">
-<button onclick="showLang('en')">🇬🇧 English</button>
-<button onclick="showLang('fr')">🇫🇷 Français</button>
-<button onclick="showLang('it')">🇮🇹 Italiano</button>
-</div>
-
-</div>
-
-</section>
-
-<!-- STORY 1 -->
-
-<section class="story">
-
-<div class="content fade-in">
-
-images/brunch.jpeg
-
-<div class="lang en">
-<h1>Our Story</h1>
-<p>
-Every great adventure begins with a simple meeting.
-What started with brunches, conversations and laughter
-slowly turned into a beautiful life shared together.
-</p>
-</div>
-
-<div class="lang fr" style="display:none">
-<h1>Notre Histoire</h1>
-<p>
-Toute belle aventure commence par une simple rencontre.
-Ce qui a commencé par des brunchs et des conversations
-est devenu une magnifique histoire à deux.
-</p>
-</div>
-
-<div class="lang it" style="display:none">
-<h1>La Nostra Storia</h1>
-<p>
-Ogni grande avventura inizia con un semplice incontro.
-Quello che è iniziato con brunch, chiacchiere e risate
-si è trasformato in una bellissima vita insieme.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- STORY 2 -->
-
-<section class="story">
-
-<div class="content fade-in">
-
-images/adventure.jpeg     alt="Adventure together"
-     class="story-photo">
-
-<div class="lang en">
-<h1>Our Adventures</h1>
-<p>
-From quiet weekends to unforgettable journeys,
-the best moments have always been the ones spent together.
-</p>
-</div>
-
-<div class="lang fr" style="display:none">
-<h1>Nos Aventures</h1>
-<p>
-Des week-ends tranquilles aux voyages inoubliables,
-les plus beaux souvenirs sont ceux vécus ensemble.
-</p>
-</div>
-
-<div class="lang it" style="display:none">
-<h1>Le Nostre Avventure</h1>
-<p>
-Dai weekend tranquilli ai viaggi indimenticabili,
-i momenti più belli sono sempre stati quelli vissuti insieme.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- WEDDING -->
-
-<section class="wedding">
-
-<div class="content fade-in">
-
-<div class="lang en">
-<h1>The Wedding</h1>
-<p>Date, venue and practical information coming soon.</p>
-</div>
-
-<div class="lang fr" style="display:none">
-<h1>Le Mariage</h1>
-<p>Date, lieu et informations pratiques à venir.</p>
-</div>
-
-<div class="lang it" style="display:none">
-<h1>Il Matrimonio</h1>
-<p>Data, luogo e informazioni pratiche in arrivo.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- RSVP -->
-
-<section class="rsvp">
-
-<div class="content fade-in">
-
-<div class="lang en">
-<h1>RSVP</h1>
-<p>Please let us know if you can attend.</p>
-</div>
-
-<div class="lang fr" style="display:none">
-<h1>RSVP</h1>
-<p>Merci de confirmer votre présence.</p>
-</div>
-
-<div class="lang it" style="display:none">
-<h1>RSVP</h1>
-<p>Fateci sapere se potrete partecipare.</p>
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-function showLang(lang){
-
-    document.querySelectorAll('.lang').forEach(function(el){
-        el.style.display='none';
-    });
-
-    document.querySelectorAll('.'+lang).forEach(function(el){
-        el.style.display='block';
-    });
-
-}
-
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-        }
-
-    });
-
-});
-
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
-
-</script>
-
-</body>
-</html>
+/* LANGUAGE
