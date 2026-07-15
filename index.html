@@ -5,6 +5,11 @@
 <title>Lou-Ann & Giulia</title>
 
 <style>
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,37 +21,19 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     scroll-snap-align: start;
 }
 
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-.slide1 {
-    background: #f5ebe0;
-}
-
-.slide2 {
-    background: #ffffff;
-}
-
-.slide3 {
-    background: #f8f9fa;
-}
-
-.slide4 {
-    background: #e9ecef;
-}
+.slide1 { background: #f5ebe0; }
+.slide2 { background: #ffffff; }
+.slide3 { background: #f8f9fa; }
+.slide4 { background: #e9ecef; }
 
 h1 {
     font-size: 4rem;
 }
 </style>
-
 </head>
 
 <body>
