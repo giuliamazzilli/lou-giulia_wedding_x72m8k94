@@ -142,7 +142,10 @@ p{
 }
 
 .hero-language-selector{
-    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .hero-language-selector button{
@@ -195,7 +198,8 @@ p{
     position:fixed;
     width:900px;
     height:2500px;
-    left:-350px;
+    left:50%;
+    transform:translateX(-50%);
     top:0;
     background:var(--yellow);
     border-radius:450px;
