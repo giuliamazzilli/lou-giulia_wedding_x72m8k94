@@ -41,20 +41,20 @@ body{
 /* FLOWER SHAPE */
 
 .flower-shape{
-    width:320px;
-    height:240px;
+    position:absolute;
+    width:260px;
+    height:220px;
+    top:80px;
+    left:50px;
     background:#D94B5C;
-
-    border-radius:40%;
-
-    clip-path: polygon(
-    50% 0%, 65% 10%, 80% 5%, 95% 25%,
-    100% 50%, 95% 75%, 80% 95%, 50% 100%,
-    20% 95%, 5% 75%, 0% 50%, 5% 25%,
-    20% 5%, 35% 10%
-    );
-}
-    
+    border-radius:50%;
+    z-index:1;
+    filter:
+        drop-shadow(40px 0 0 #D94B5C)
+        drop-shadow(-40px 0 0 #D94B5C)
+        drop-shadow(0 40px 0 #D94B5C)
+        drop-shadow(0 -40px 0 #D94B5C);
+}    
 /* ORANGE STRIPED ARCH */
 
 .arch{
