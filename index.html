@@ -5,6 +5,7 @@
 <title>Lou-Ann & Giulia</title>
 
 <style>
+
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -17,12 +18,15 @@ body {
 
 section {
     height: 100vh;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
     scroll-snap-align: start;
+    padding: 20px;
 }
 
 .slide1 { background: #f5ebe0; }
@@ -30,33 +34,150 @@ section {
 .slide3 { background: #f8f9fa; }
 .slide4 { background: #e9ecef; }
 
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-selector button {
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
 h1 {
     font-size: 4rem;
 }
+
+p {
+    font-size: 1.4rem;
+    max-width: 700px;
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="language-selector">
+    <button onclick="showLang('en')">🇬🇧</button>
+    <button onclick="showLang('fr')">🇫🇷</button>
+    <button onclick="showLang('it')">🇮🇹</button>
+</div>
+
 <section class="slide1">
+
+<div class="lang en">
     <h1>Lou-Ann & Giulia</h1>
     <p>Welcome to our wedding website</p>
+</div>
+
+<div class="lang fr" style="display:none">
+    <h1>Lou-Ann & Giulia</h1>
+    <p>Bienvenue sur notre site de mariage</p>
+</div>
+
+<div class="lang it" style="display:none">
+    <h1>Lou-Ann & Giulia</h1>
+    <p>Benvenuti sul nostro sito di matrimonio</p>
+</div>
+
 </section>
 
 <section class="slide2">
-    <h1>Our Story</h1>
-    <p>How we met...</p>
+
+<div class="lang en">
+    <div>
+        <h1>Our Story</h1>
+        <p>How we met...</p>
+    </div>
+</div>
+
+<div class="lang fr" style="display:none">
+    <div>
+        <h1>Notre Histoire</h1>
+        <p>Comment nous nous sommes rencontrées...</p>
+    </div>
+</div>
+
+<div class="lang it" style="display:none">
+    <div>
+        <h1>La Nostra Storia</h1>
+        <p>Come ci siamo conosciute...</p>
+    </div>
+</div>
+
 </section>
 
 <section class="slide3">
-    <h1>The Wedding</h1>
-    <p>Venue and information</p>
+
+<div class="lang en">
+    <div>
+        <h1>The Wedding</h1>
+        <p>Date, venue and useful information.</p>
+    </div>
+</div>
+
+<div class="lang fr" style="display:none">
+    <div>
+        <h1>Le Mariage</h1>
+        <p>Date, lieu et informations utiles.</p>
+    </div>
+</div>
+
+<div class="lang it" style="display:none">
+    <div>
+        <h1>Il Matrimonio</h1>
+        <p>Data, luogo e informazioni utili.</p>
+    </div>
+</div>
+
 </section>
 
 <section class="slide4">
-    <h1>RSVP</h1>
-    <p>Please let us know if you can attend.</p>
+
+<div class="lang en">
+    <div>
+        <h1>RSVP</h1>
+        <p>Please let us know if you can attend.</p>
+    </div>
+</div>
+
+<div class="lang fr" style="display:none">
+    <div>
+        <h1>RSVP</h1>
+        <p>Merci de confirmer votre présence.</p>
+    </div>
+</div>
+
+<div class="lang it" style="display:none">
+    <div>
+        <h1>RSVP</h1>
+        <p>Fateci sapere se potrete partecipare.</p>
+    </div>
+</div>
+
 </section>
+
+<script>
+
+function showLang(lang) {
+
+    document.querySelectorAll('.lang').forEach(function(el) {
+        el.style.display = 'none';
+    });
+
+    document.querySelectorAll('.' + lang).forEach(function(el) {
+        el.style.display = 'block';
+    });
+
+}
+
+</script>
 
 </body>
 </html>
