@@ -1,49 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+<meta charset="UTF-8">
+<title>Lou-Ann & Giulia</title>
 
-    <title>Lou-Ann & Giulia</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.slide1 {
+    background: #f5ebe0;
+}
+
+.slide2 {
+    background: #ffffff;
+}
+
+.slide3 {
+    background: #f8f9fa;
+}
+
+.slide4 {
+    background: #e9ecef;
+}
+
+h1 {
+    font-size: 4rem;
+}
+</style>
+
 </head>
 
 <body>
 
-<div class="reveal">
-    <div class="slides">
+<section class="slide1">
+    <h1>Lou-Ann & Giulia</h1>
+    <p>Welcome to our wedding website</p>
+</section>
 
-        <section>
-            <h1>Lou-Ann & Giulia</h1>
-            <p>Welcome to our wedding website</p>
-        </section>
+<section class="slide2">
+    <h1>Our Story</h1>
+    <p>How we met...</p>
+</section>
 
-        <section>
-            <h2>Our Story</h2>
-            <p>How we met...</p>
-        </section>
+<section class="slide3">
+    <h1>The Wedding</h1>
+    <p>Venue and information</p>
+</section>
 
-        <section>
-            <h2>The Wedding</h2>
-            <p>Venue and information</p>
-        </section>
-
-        <section>
-            <h2>RSVP</h2>
-            <p>Please let us know if you can attend.</p>
-        </section>
-
-    </div>
-</div>
-
-.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-
-<script>
-Reveal.initialize();
-</script>
+<section class="slide4">
+    <h1>RSVP</h1>
+    <p>Please let us know if you can attend.</p>
+</section>
 
 </body>
 </html>
