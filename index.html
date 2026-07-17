@@ -214,6 +214,11 @@ p{
     opacity:.18;
 }
 
+html, body {
+overflow-x: hidden;
+width: 100%;
+}
+
 .our-story{
     display:flex;
     justify-content:center;
@@ -452,7 +457,7 @@ Petit à petit, ces petits moments du quotidien se sont transformés en une magn
 <div class="our-story">
     <img src="images/car us.jpeg" alt="Car" class="gallery-photo">
     <div class="video-frame">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline webkit-playsinline>
     <source src = "videos/bernie video.mp4" type="video/mp4">
     </video>
     </div>
@@ -616,7 +621,7 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
     <p>Fateci sapere se potrete partecipare entro il 30 di Agosto.</p>
 </div>
   
-<video class="final-video" autoplay muted loop playsinline>
+<video class="final-video" autoplay muted loop playsinline webkit-playsinline>
 <source src="videos/final.mp4" type="video/mp4">
 </video>
 
