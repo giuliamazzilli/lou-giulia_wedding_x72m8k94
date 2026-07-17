@@ -463,7 +463,7 @@ Petit à petit, ces petits moments du quotidien se sont transformés en une magn
 <div class="our-story">
     <img src="images/car us.jpeg" alt="Car" class="gallery-photo">
     <div class="video-frame">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline webkit-playsinline>
     <source src = "videos/bernie video.mp4" type="video/mp4">
     </video>
     </div>
@@ -475,6 +475,12 @@ Petit à petit, ces petits moments du quotidien se sont transformés en une magn
 </section>
 
 <!-- SLIDE 2 - ADVENTURES -->
+
+<style>
+/* make the embedded video larger on small screens */
+.responsive-video { width: 90vw; max-width: 900px; height: auto; display: block; margin: 0 auto; }
+@media (min-width: 768px) { .responsive-video { width: 60vw; } }
+</style>
 
 <section>
 
