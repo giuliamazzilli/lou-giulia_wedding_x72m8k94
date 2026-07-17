@@ -222,22 +222,26 @@ p{
     margin-top:40px;
 }
 
+.our-story video{
+border-radius:32px;
+overflow:hidden;
+height: 300px;
+width: auto;
+}
+
 .gallery-photo{
     width:30%;
     max-width:250px;
+    height:250px;
+    object-fit:cover;
     border-radius:20px;
-    height:auto;
-}
-
-    .our-story video{
-    border-radius:32px;
-    overflow:hidden;
 }
 
 .final-video {
 transform: rotate(90deg);
 border-radius: 32px;
 overflow: hidden;
+max-height:250px;
 }
 
 @media (max-width:768px){
@@ -308,8 +312,9 @@ overflow: hidden;
 .our-story video{
 border-radius:32px;
 overflow:hidden;
-height: 100px;
-}
+height: 150px;
+width: auto;
+    }
 
 .final-video {
 transform: rotate(90deg);
@@ -317,12 +322,6 @@ border-radius: 32px;
 overflow: hidden;
 }
 
-}
-
-.our-story video{
-border-radius:32px;
-overflow:hidden;
-height: 400px;
 }
 
 .final-video {
@@ -453,7 +452,7 @@ Petit à petit, ces petits moments du quotidien se sont transformés en une magn
 <div class="our-story">
     <img src="images/car us.jpeg" alt="Car" class="gallery-photo">
     <div class="video-frame">
-    <video autoplay muted loop height="400">
+    <video autoplay muted loop>
     <source src = "videos/bernie video.mp4" type="video/mp4">
     </video>
     </div>
@@ -498,7 +497,7 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <div class="our-story">
     <img src="images/scooter.jpeg" alt="Scooter" class="gallery-photo">
-    <video autoplay muted loop height="400">
+    <video autoplay muted loop>
     <source src = "videos/licking.mp4" type="video/mp4">
     </video>
     <img src="images/cute bernino.jpeg" alt="Bernino" class="gallery-photo">
@@ -515,18 +514,16 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <div class="content fade-in">
 
-<div class="our-story">
-    <img src="images/domainemap.png" alt="Domaine" class="gallery-photo">
-</div>
-
 <div class="lang en">
 <div class="flower-shape"></div>
 
 <h1>The Wedding</h1>
-
+<p>On the 23rd to the 25th of April, we will be celebrating our wedding in the beautiful setting of:</p>
+<P>We inform you that our website will be held at the following location:</P>
 <h2>Le Domaine des Ayasses<h2>
- <h3>1445 Route de Upie – 26400 Vaunaveys-la-Rochette</h3>
+ <h3>1445 Route de Upie – 26400 Vaunaveys-la-Rochette, France</h3>
     <p><a href="https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA" target="_blank">View the location on Google Maps</a></p>
+<p> We are thrilled to share this special moment with our loved ones and create unforgettable memories together.</p>
 </div>
 
 <div class="lang fr" style="display:none">
@@ -546,6 +543,52 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
     <p><a href="https://goo.gl/maps/Cf8WwJ2MHZJmGYmBA" target="_blank">Trova il luogo su Google Maps</a></p>
 </div>
 
+<!-- SLIDE 3 - WEDDING -->
+
+<section>
+
+
+<div class="blob orange"></div>
+
+<div class="content fade-in">
+
+<div class="our-story">
+    <img src="images/domainemap.png" alt="Domaine" class="gallery-photo">
+</div>
+
+<div class="lang en">
+<div class="flower-shape"></div>
+
+<h1>The Accomodations</h1>
+
+ <p>Limited complimentary accomodation available in the domaine.</p>
+ <p>Please note that the building/room will be shared between guests.</p>
+ <p>Additional private accommodations are available around the site.</p>
+ <p>Our (cooler) friends are also welcome to camp on site ;)</p>
+</div>
+
+<div class="lang fr" style="display:none">
+<h1>Les Hébergements</h1>
+<div class="flower-shape"></div>
+
+<h2>Le Domaine des Ayasses</h2>
+ <p>Hébergement gratuit et limité disponible dans le domaine.</p>
+ <p>Veuillez noter que le bâtiment/la chambre sera partagé(e) entre les invités.</p>
+ <p>Des hébergements privés supplémentaires sont disponibles autour du site.</p>
+ <p>Nos ami·e·s les plus cool sont également les bienvenu·e·s pour camper sur place ;)</p>
+</div>
+
+<div class="lang it" style="display:none">
+<h1>Gli Alloggi</h1>
+<div class="flower-shape"></div>
+
+ <p>Alloggio gratuito e limitato disponibile nel dominio.</p>
+ <p>Si prega di notare che l'edificio/la stanza sarà condiviso/a tra gli ospiti.</p>
+ <p>Sono disponibili ulteriori alloggi privati intorno al sito.</p>
+ <p>Anche i nostri amici (più fighetti) sono benvenuti a campeggiare sul posto ;)</p>
+</div>
+
+
 </div>
 
 </section>
@@ -560,17 +603,17 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 <div class="lang en">
     <h1>RSVP</h1>
-    <p>Please let us know if you can attend.</p>
+    <p>Please let us know if you can attend by the 30th of August.</p>
 </div>
 
 <div class="lang fr" style="display:none">
     <h1>RSVP</h1>
-    <p>Merci de confirmer votre présence.</p>
+    <p>Merci de confirmer votre présence avant le 30 août.</p>
 </div>
 
 <div class="lang it" style="display:none">
     <h1>RSVP</h1>
-    <p>Fateci sapere se potrete partecipare.</p>
+    <p>Fateci sapere se potrete partecipare entro il 30 di Agosto.</p>
 </div>
   
 <video class="final-video" autoplay muted loop>
@@ -585,7 +628,7 @@ i momenti più belli sono sempre stati quelli vissuti insieme.
 
 @media (max-width: 600px) {
   .final-video {
-    height: 150px;
+    height: 300px;
   }
 }
 </style>
